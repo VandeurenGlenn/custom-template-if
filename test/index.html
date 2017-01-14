@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+  <link rel="import" href="../custom-template-if.html">
+</head>
+<body>
+  <custom-template-if id="fixture" if="false">
+    <template>
+      <h1>Title</h1>
+    </template>
+  </custom-template-if>
+  <script>
+    suite('<custom-template-if>', function() {
+      let fixture = document.getElementById('fixture');
+
+      test('if is false', function() {
+        assert.isFalse(fixture.if);
+      });
+
+      test('shadowDom should not contain children', function() {
+        let title = fixture.root.querySelector('h1');
+        assert.equal(title, null);
+      });
+
+      test('if is true', function() {
+        fixture.if = false;
+        assert.isTrue(fixture.if);
+      });
+
+      test('shadowDom should contain children', function() {
+        let title = fixture.root.querySelector('h1');
+        assert.equal(title, fixture.querySelector('template').children[0]);
+      });
+    });
+  </script>
+</body>
+</html>

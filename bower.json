@@ -1,0 +1,26 @@
+{
+  "name": "custom-template-if",
+  "version": "0.1.0",
+  "description": "Append, remove, hide & show dom",
+  "main": "custom-template-if.html",
+  "authors": [
+    "Glenn Vandeuren <vandeurenglenn@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "template",
+    "dom",
+    "if"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "v1"
+  }
+}
