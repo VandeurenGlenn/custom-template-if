@@ -8,9 +8,7 @@
 </head>
 <body>
   <custom-template-if id="fixture" if="false">
-    <template>
-      <h1>Title</h1>
-    </template>
+    <h1>Title</h1>
   </custom-template-if>
   <script>
     suite('<custom-template-if>', function() {
@@ -32,7 +30,7 @@
 
       test('shadowDom should contain children', function() {
         let title = fixture.root.querySelector('h1');
-        assert.equal(title, fixture.querySelector('template').children[0]);
+        assert.equal(title, fixture.children[0]);
       });
     });
   </script>

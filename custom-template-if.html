@@ -1,1 +1,57 @@
-<script src="dist/custom-template-if.browser.js"></script>
+<link rel="import" href="../backed/backed.html">
+
+<template id="custom-template-if"></template>
+
+<script>
+  Backed(class CustomTemplateIf extends HTMLElement {
+    static get observedAttributes() {
+      return ['if'];
+    }
+
+    static get properties() {
+      return {
+        if: {
+          value: null,
+          observer: '__render__'
+        }
+      }
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+      this[name] = newValue;
+    }
+
+    boolify(value) {
+      switch (value) {
+        case 'false':
+        case 'null':
+        case 'undefined':
+        case '0':
+        case '':
+        case 0:
+        case null:
+        case undefined:
+        case false:
+          return false;
+          break;
+        default:
+          return true;
+      }
+    }
+
+    __render__(change) {
+      if (change.value !== this._currentIf) {
+        this._currentIf = change.value;
+        if (this.boolify(change.value)) {
+          for (const child of this.children) {
+            this.shadowRoot.appendChild(child.cloneNode(true))
+          }
+        } else {
+          for (const child of this.shadowRoot.children) {
+            this.shadowRoot.removeChild(child)
+          }
+        }
+      }
+    }
+  });
+</script>

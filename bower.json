@@ -1,7 +1,7 @@
 {
   "name": "custom-template-if",
-  "version": "0.1.0",
-  "description": "Append, remove, hide & show dom",
+  "version": "0.5.0",
+  "description": "Append & remove (hide & show) dom",
   "main": "custom-template-if.html",
   "authors": [
     "Glenn Vandeuren <vandeurenglenn@gmail.com>"
@@ -21,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "webcomponentsjs": "v1"
+    "webcomponentsjs": "v1",
+    "backed": "^0.8.0"
   }
 }
