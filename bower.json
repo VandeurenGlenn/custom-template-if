@@ -23,5 +23,8 @@
   "dependencies": {
     "webcomponentsjs": "v1",
     "backed": "^0.8.0"
+  },
+  "devDependencies": {
+    "web-component-tester": "^6.0.1"
   }
 }
