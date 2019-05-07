@@ -1,0 +1,27 @@
+{
+  "name": "custom-template-if",
+  "version": "1.0.0",
+  "description": "Append & remove (hide & show) dom",
+  "main": "custom-template-if.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VandeurenGlenn/custom-template-if.git"
+  },
+  "keywords": [
+    "custom",
+    "template",
+    "if"
+  ],
+  "author": "Glenn Vandeuren <vandeurenglenn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VandeurenGlenn/custom-template-if/issues"
+  },
+  "homepage": "https://github.com/VandeurenGlenn/custom-template-if#readme"
+}
