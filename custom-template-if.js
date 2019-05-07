@@ -22,8 +22,6 @@ customElements.define('custom-template-if', class CustomTemplateIf extends HTMLE
   constructor() {
     super();
     this.attachShadow({mode: 'open'});
-    // this.shadowRoot.i
-    this.if = false;
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
